@@ -101,7 +101,7 @@ body{
 
     display: flex;
     text-align: center;
-    background-color: rgb(90,105,147);;
+    background-color: rgb(90,105,147);
     justify-content: center;
     justify-items: center;
     padding: 5px;
@@ -137,6 +137,17 @@ body{
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
+}
+.trends::-webkit-scrollbar{
+    height: 4px;
+}
+.trends::-webkit-scrollbar-thumb{
+    background-color: rgb(90,105,147);;
+    border-radius: 10px;
+}
+.trends::-webkit-scrollbar-track{
+    background-color: #10141F;;
+    border-radius: 10px;
 }
 .trend{
     position: relative;
