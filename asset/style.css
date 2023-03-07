@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -7,13 +7,13 @@
 
 
 body{
-    background:rgb(16,20,31);
-    border: 1px solid #161d2f;
+    background:#10141F;
+    /* border: 1px solid #161d2f; */
     min-height: 67vh;
     font-family: 'Lora', serif;
    
     font-size: 14px;
-    color: hsl(200, 15%, 8%);
+    /* color: hsl(200, 15%, 8%); */
     font-family: 'Nunito Sans', sans-serif;
     width: 100%;
     /* width: 420px; */
@@ -27,21 +27,136 @@ body{
     display: flex  ;
     width: 100%;
     position: relative;
-    padding: 30px;  
+    padding: 20px;  
+    font-family: 'Nunito Sans', sans-serif;
 }
 #sidebar{
-    display: grid;
-    background-color: #161d2f;
-    height: 90vh;
+    position: relative;
+    background-color:  #161d2f;
+   
+    min-height: 92vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    grid-template-rows: 1fr 2fr 5fr;
+    /* grid-template-rows: 1fr 2fr 5fr; */
+    padding: 20px;
+    border-radius: 10px;
+
 
 }
-.cream{
-    
+.mainIcon{
+    color: #FC4747;
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+    cursor: pointer;
 }
 .leftIcons{
- /* color: rgb(90,105,147);rgb(90,105,147) */
+    color: rgb(90,105,147);
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.otherVids{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+.profileWrap{
+    justify-self: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1.5px solid white;
+    /* position it at bottome of the sidebat */
+    position: absolute;
+    bottom: 20px;
+    background: url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
+}
+.main{
+    padding-left: 20px;
+     width: 100%;
+}
+.searchwrap{
+    background-color: #10141F;;
+    width: 60%;
+    color: #E4E8EC;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 20px;
+}
+#search{
+    background-color: #10141F;
+    border: none;
+    outline: none;
+    color: #161d2f;
+    padding: 10px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 1rem;
+    
+  
+}
+#bookmarkWrap{
+
+    display: flex;
+    text-align: center;
+    background-color: rgb(90,105,147);;
+    justify-content: center;
+    justify-items: center;
+    padding: 5px;
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    right: 10px;
+    border-radius: 50%;
+}
+.bookmrkVid{
+    color: white;
+}
+.color{
+    color: #E4E8EC;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+#searchicon{
+    cursor: pointer;
+}
+#search:hover, #search:focus {
+    background-color: #10141F;
+  }
+.trendingWrap{
+
+}
+.trends{
+    position: relative;
+    margin-bottom: 30px;
+    border-bottom: 0.05px solid rgb(90,105,147);
+    opacity: 0.5;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.trend{
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    height: 180px;
+    margin-right: 10px;
+    width: 288px;
+    padding: 15px;
+    background: url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
+}
+
+.moviedescWrap{
+    width: 80%;
+    position: absolute;
+    bottom: 10px;
+
+}
+.detailswrap h3{
+    color: #E4E8EC;
+    font-size: 1.1rem;
+    font-weight: 400;
 }
