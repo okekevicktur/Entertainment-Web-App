@@ -12,19 +12,21 @@
     <div class="container">
         <!-- The sidebar -->
         <header id="sidebar">
-            <div class="vidmain">
-                <i class="fa-solid fa-clapperboard"></i>
-            </div>
-          
-            <div class="otherVids">
-                <i class="fa-solid fa-table-cells-large leftIcons"></i>
-                <i class="fa-solid fa-film-simple leftIcons"></i>
-                <i class="fa-solid fa-tv leftIcons"></i>
-                <i class="fa-solid fa-bookmark leftIcons"></i>
-           </div>  
+            <div class="topIcon">
+                <div class="vidmain">
+                    <i class="fa-solid fa-clapperboard mainIcon" ></i>
+                </div>
+              
+                <div class="otherVids">
+                    <i class="fa-solid fa-table-cells-large leftIcons"></i>
+                    <i class="fa-solid fa-film leftIcons"></i>
+                    <i class="fa-solid fa-tv leftIcons"></i>
+                    <i class="fa-solid fa-bookmark leftIcons"></i>
+               </div> 
+            </div>          
 
-           <div class="profileWrap" id="yes">
-                <img src="" alt="">
+           <div class="profileWrap" >
+                <!-- <img src="./asset/images/Victors Passport.JPG" alt="profile picture"> -->
            </div>         
         </header>
         
@@ -32,18 +34,49 @@
         <div class="main">
             <div class="searchwrap">
                 <span id="searchicon"> <i class="fa-solid fa-magnifying-glass" class="search-icon'"></i></span>
-                <input type="search" name="" id="search" placeholder="Search for movies orTV series">
+                <input type="text" name="" id="search" placeholder="Search for movies or TV series">
             </div>
             <!-- main container -->
             <div class="submain">
                 <div class="trendingWrap">
                     <!-- trending -->
-                   <p class="trendTxt">Trending</p>
+                   <p class="trendTxt color">Trending</p>
                    <div class="trends">
+                        <div class="trend">
+                            <div id="bookmarkWrap">
+                              <i class="fa-solid fa-bookmark bookmrkVid"></i>
+                            </div>
+                            <div class="moviedescWrap">
+                                <div class="detailswrap">
+                                    <span>2019</span>     <i class="fa-solid fa-film "></i> <span>.PG</span>
+                                    <h3>Beyond Earth</h3>
 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend">
+                            <div id="bookmarkWrap">
+                              <i class="fa-solid fa-bookmark leftIcons"></i>
+                            </div>
+                        </div>
+                        <div class="trend">
+                            <div id="bookmarkWrap">
+                              <i class="fa-solid fa-bookmark leftIcons"></i>
+                            </div>
+                        </div>
+                        <div class="trend">
+                            <div id="bookmarkWrap">
+                              <i class="fa-solid fa-bookmark leftIcons"></i>
+                            </div>
+                        </div>
+                        <div class="trend">
+                            <div id="bookmarkWrap">
+                              <i class="fa-solid fa-bookmark leftIcons"></i>
+                            </div>
+                        </div>
                    </div>
                    <!-- Recommended for you -->
-                   <p class="recommendTxt">Recommended for you</p>
+                   <p class="recommendTxt color">Recommended for you</p>
                    <div class="recommends">
 
                    </div>
@@ -51,6 +84,7 @@
             </div>    
         </div>
     </div>
-    <script src="./asset/app.js"></script>
+    <script type="module" src="./asset/app.js"></script>
+    <!-- <script type="module" src="data.js"></script> -->
 </body>
 </html>

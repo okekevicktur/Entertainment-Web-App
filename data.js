@@ -455,3 +455,5 @@ export const movies = [
     isTrending: false,
   },
 ];
+
+// export default movies;
