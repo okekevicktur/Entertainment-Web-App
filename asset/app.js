@@ -26,7 +26,7 @@ function getMoviesNotTrending(){
  }
 
 function notTrending(trendArray) {
-
+console.log(trendArray);
     trendArray.forEach(movie => {   
         // #region
         // Create a new trend element
@@ -54,10 +54,20 @@ function notTrending(trendArray) {
         const spanYear = document.createElement('span');
         spanYear.className = "detailspan";
         spanYear.innerText = `${movie.year}`;
-
-        const iconFilm = document.createElement('i');
-        iconFilm.classList.add('fa-solid', 'fa-film', 'detailspan');
-
+         
+        const iconFilm = document.createElement('img');
+        const spanCtg = document.createElement('span');
+        spanCtg.className=  'detailspan';
+        if (`${movie.category}` === "Movie") {
+            
+            iconFilm.src = "/asset/icon-category-movie.svg"; 
+            spanCtg.innerText = `${movie.category}`;
+        } else if(`${movie.category}` === "TV Series") {
+            
+            iconFilm.src = "/asset/icon-category-tv.svg"; 
+            spanCtg.innerText = `${movie.category}`;
+        }
+       
         const spanPg = document.createElement('span');
         spanPg.className = "detailspan";
         spanPg.innerText = `${movie.rating}`;
@@ -74,6 +84,7 @@ function notTrending(trendArray) {
         divdescription.appendChild(divdetails);
         divdetails.appendChild(spanYear);
         divdetails.appendChild(iconFilm);
+        divdetails.appendChild(spanCtg);
         divdetails.appendChild(spanPg);
         divdetails.appendChild(movietitle); 
         // console.log(movie.thumbnail.regular.large);
@@ -108,9 +119,18 @@ window.addEventListener('load',function(){
         spanYear.className = "detailspan";
         spanYear.innerText = `${movie.year}`;
 
-        const iconFilm = document.createElement('i');
-        iconFilm.classList.add('fa-solid', 'fa-film', 'detailspan');
-
+        const iconFilm = document.createElement('img');
+        const spanCtg = document.createElement('span');
+        spanCtg.className=  'detailspan';
+        if (`${movie.category}` === "Movie") {
+            
+            iconFilm.src = "/asset/icon-category-movie.svg"; 
+            spanCtg.innerText = `${movie.category}`;
+        } else if(`${movie.category}` === "TV Series") {
+            
+            iconFilm.src = "/asset/icon-category-tv.svg"; 
+            spanCtg.innerText = `${movie.category}`;
+        }
         const spanPg = document.createElement('span');
         spanPg.className = "detailspan";
         spanPg.innerText = `${movie.rating}`;
@@ -126,6 +146,7 @@ window.addEventListener('load',function(){
         divdescription.appendChild(divdetails);
         divdetails.appendChild(spanYear);
         divdetails.appendChild(iconFilm);
+        divdetails.appendChild(spanCtg);
         divdetails.appendChild(spanPg);
         divdetails.appendChild(movietitle); 
         // console.log(movie.thumbnail.regular.large);

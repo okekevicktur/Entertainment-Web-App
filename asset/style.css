@@ -4,8 +4,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
-
 body{
     background:#10141F;
     /* border: 1px solid #161d2f; */
@@ -258,8 +256,13 @@ body::-webkit-scrollbar-track{
 }
 .detailspan{
     color: white;
-    font-size: 0.7rem;
-    margin-right: 3px;
+    font-size: 0.9rem;
+    margin-right: 4px;
+}
+.detailswrap img{
+    font-size: 0.2rem;
+    height: 10px;
+    margin-right: 4px
 }
 @keyframes dangle {
     /* Define animation */
@@ -269,5 +272,5 @@ body::-webkit-scrollbar-track{
     to {
       transform: rotate(2deg);
     }
-  }
+}
 
