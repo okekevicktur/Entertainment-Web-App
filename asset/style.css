@@ -31,14 +31,13 @@ body{
     font-family: 'Nunito Sans', sans-serif;
 }
 #sidebar{
-    position: relative;
+    position: fixed;
     background-color:  #161d2f;
    
     min-height: 92vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* grid-template-rows: 1fr 2fr 5fr; */
     padding: 20px;
     border-radius: 10px;
 
@@ -70,11 +69,15 @@ body{
     /* position it at bottome of the sidebat */
     position: absolute;
     bottom: 20px;
+    /* background: url("/asset/") no-repeat center center/cover; */
+
     background: url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
 }
 .main{
+    position: relative;
     padding-left: 20px;
-     width: 100%;
+     width: 95%;
+     margin-left: 75px;
 }
 .searchwrap{
     background-color: #10141F;;
@@ -97,22 +100,23 @@ body{
     
   
 }
-#bookmarkWrap{
-
+.bookmarkWrap{
     display: flex;
-    text-align: center;
     background-color: rgb(90,105,147);
     justify-content: center;
     justify-items: center;
-    padding: 5px;
     height: 24px;
     width: 24px;
     position: absolute;
     right: 10px;
     border-radius: 50%;
+    padding-top: 6px;
 }
 .bookmrkVid{
     color: white;
+    font-size: 0.7rem;
+    
+
 }
 .color{
     color: #E4E8EC;
@@ -127,9 +131,16 @@ body{
     background-color: #10141F;
   }
 .trendingWrap{
-
+    width: 100%;
 }
-.trends{
+#recommends{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+
+#trends{
     position: relative;
     margin-bottom: 30px;
     border-bottom: 0.05px solid rgb(90,105,147);
@@ -137,17 +148,48 @@ body{
     width: 100%;
     overflow-x: auto;
     white-space: nowrap;
+  
 }
-.trends::-webkit-scrollbar{
+#trends::-webkit-scrollbar{
     height: 4px;
 }
-.trends::-webkit-scrollbar-thumb{
+#trends::-webkit-scrollbar-thumb{
     background-color: rgb(90,105,147);;
     border-radius: 10px;
 }
-.trends::-webkit-scrollbar-track{
+#trends::-webkit-scrollbar-track{
     background-color: #10141F;;
     border-radius: 10px;
+}
+body::-webkit-scrollbar{
+    width: 4px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color:#161d2f;
+    border-radius: 10px;
+}
+body::-webkit-scrollbar-track{
+    background-color: #10141F;;
+    border-radius: 5px;
+}
+.trendrem{
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+    height: 180px;
+    margin-right: 10px;
+    width: 288px;
+    padding: 15px;
+    /* Set initial brightness */
+    filter: brightness(1);
+    /* Set transition duration and timing function */
+    transition: filter 0.3s ease-in-out;
+    /* Set initial transform
+    transform: rotate(0deg);
+    /* Set transition duration and timing function */
+    /* transition: transform 0.3s ease-in-out; */ 
+    background: url("/asset/thumbnails/1998/regular/large.jpg") no-repeat center center/cover;
+
 }
 .trend{
     position: relative;
@@ -157,17 +199,67 @@ body{
     margin-right: 10px;
     width: 288px;
     padding: 15px;
-    background: url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
+    /* Set initial brightness */
+    filter: brightness(1);
+    /* Set transition duration and timing function */
+    transition: filter 0.3s ease-in-out;
+    /* Set initial transform */
+    transform: rotate(0deg);
+    /* Set transition duration and timing function */
+    transition: transform 0.3s ease-in-out;
+    background: url("/asset/thumbnails/1998/regular/large.jpg") no-repeat center center/cover;
 }
+.trend:hover, .recomd:hover {
+    /* Brighten on hover */
+    filter: brightness(1.2);
+    /* Set transition duration and timing function */
+    transition: filter 0.3s ease-in-out;
+    /* Set transform on hover */
+    transform: rotate(0deg);
+    /* Set animation properties */
+    animation-name: dangle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+  }
+  .trend:hover:not(:focus),  .recomd:hover:not(:focus) {
+    /* Dim on mouse leave */
+    filter: brightness(0.8);
+    /* Set transition duration and timing function */
+    transition: filter 0.3s ease-in-out;
+  }
 
 .moviedescWrap{
-    width: 80%;
+    display: block;
+    width: 100%;
     position: absolute;
     bottom: 10px;
 
 }
-.detailswrap h3{
-    color: #E4E8EC;
-    font-size: 1.1rem;
-    font-weight: 400;
+.reMoviedescWrap{
+    display: block;
+    width: 100%;
+    /* background-color: firebrick; */
+    padding: 10px 0;
 }
+.detailswrap h3{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.detailspan{
+    color: white;
+    font-size: 0.7rem;
+    margin-right: 3px;
+}
+@keyframes dangle {
+    /* Define animation */
+    from {
+      transform: rotate(-8deg);
+    }
+    to {
+      transform: rotate(2deg);
+    }
+  }
+
