@@ -2,6 +2,8 @@ import { movies } from '../data.js';
 const mvBtn = document.querySelector('.mainIcon');
 const trendsContainer = document.getElementById('trends');
 const recoomendsContainer = document.getElementById('recommends');
+const bkmrkBtn = document.querySelector('.bookmarkWrap');
+
 function createElem(){
 
 

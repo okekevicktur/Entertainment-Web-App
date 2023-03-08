@@ -112,6 +112,14 @@ body{
     border-radius: 50%;
     padding-top: 6px;
 }
+.bookmarkWrap:hover{
+    background-color: hsl(0, 0%, 100%);  
+}
+.bookmarkWrap:hover i{
+   
+    color: rgb(90,105,147);
+   
+}
 .bookmrkVid{
     color: white;
     font-size: 0.7rem;
