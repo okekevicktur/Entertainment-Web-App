@@ -1,22 +1,28 @@
-# Frontend Mentor - REST Countries API with color theme switcher
+# Frontend Mentor - Entertainment API 
 
-![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [Frontend Mentor - Entertainment API](https://www.frontendmentor.io/challenges/entertainment-web-app-J-UhgAW1X). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+**Note: Delete this note and update the table of contents based on what sections you keep.**
 
-**To do this challenge, you need a good understanding of HTML, CSS, and JavaScript.**
+## Overview
 
-## The challenge
+### The challenge
 
-My challenge is to integrate with the [REST Countries API](https://restcountries.com) to pull country data and display it like in the designs.
-
-I used vanilla JS and fetch for the http request
-
-you should be able to:
+Users should be able to:
 
 - See all countries from the API on the homepage
 - Search for a country using an `input` field
@@ -25,21 +31,76 @@ you should be able to:
 - Click through to the border countries on the detail page
 - Toggle the color scheme between light and dark mode *(optional)*
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-**⚠️ NOTE ⚠️: Sometimes the REST Countries API can go down. We've added a `data.json` file with all the country data if you prefer to use that instead. However, please be aware that the data in the JSON file might not be up-to-date.**
+![screenshot](./ScreenShot.png)
 
-## Deploying your project
+### Links
 
-I hosted my project for free on
+- Solution URL: [Add solution URL here](https://github.com/okekevicktur/Entertainment-Web-App)
+- Live Site URL: [Add live site URL here](https://bigvickz-entertainment.netlify.app/)
 
-- [Netlify](https://www.netlify.com/)
-This is it
-- [Bigvickz-restcountries](http://Bigvickz-restcountries.netlify.app)
+## My process
 
+### Built with
 
-## Got feedback for me?
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Mobile-first workflow
+- [Javascript](https://javascript.org/) - JS
 
-I love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email okekevicktur[at]gmail[dot]com.
+### What I learned
 
-**Hope you had fun!** 🚀
+I learnt animation, transition, and how to perform dynamic action in an array of data and sync across all other components
+
+To see how you can add code snippets, see below:
+
+```html
+<div class="trend">
+```
+
+```css
+.trend:hover, .recomd:hover {
+    /* Brighten on hover */
+    filter: brightness(1.2);
+    /* Set transition duration and timing function */
+    transition: filter 0.3s ease-in-out;
+    /* Set transform on hover */
+    transform: rotate(0deg);
+    /* Set animation properties */
+    animation-name: dangle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction:alternate-reverse;
+  }
+```
+
+```js
+function getMovies(input){
+    const trends= movies
+    .filter((movie) => movie.title === input);
+    return trends;
+ }
+```
+
+### Continued development
+
+In my future learning, i will focus more on component styling, accessibiliy and react.
+
+### Useful resources
+
+- [For all my icons](https://www.fontawesome.com) - This helped me for all the icons in the project. I really liked the ease of integration and will use it going forward.
+- [Fonts](https://fonts.google.com) - This is an amazing tool for various fonts and their sizes. 
+
+## Author
+
+- Website - [Victor Okeke](https://github.com/okekevicktur)
+- Frontend Mentor - [@Vicktur](https://www.frontendmentor.io/profile/okekevicktur)
+- Twitter - [@Vicscot1](https://www.twitter.com/Vicscot1)
+
+## Acknowledgments
+
+Thanks to Anambra Techies Community, every question i threw at them came back with a working answer.
