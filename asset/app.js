@@ -19,6 +19,7 @@ BtnBookmark.addEventListener('click', function(){
         return;
     }
     else{
+        highlight(BtnBookmark);
         trendWrapDiv.style.display= "none";
         otherWrapDiv.style.display= "block";
         header.innerText ="Bookmarked Movies";
@@ -99,6 +100,7 @@ BtnSeries.addEventListener('click', function(){
         return;
     }
     else{
+        highlight(BtnSeries);
         trendWrapDiv.style.display= "none";
         otherWrapDiv.style.display= "block";
         header.innerText ="TV Series";
@@ -175,11 +177,12 @@ BtnSeries.addEventListener('click', function(){
     }
 });
 BtnMovies.addEventListener('click', function(){
-
-    if (header && header.innerText === "Movies") {
+   
+    if (header && header.innerText === "Movies" && otherWrapDiv.style.display == "block") {
         return;
     }
     else{
+        highlight(BtnMovies);
         trendWrapDiv.style.display= "none";
         otherWrapDiv.style.display= "block";
         header.innerText ="Movies";
@@ -260,13 +263,22 @@ justTrendy.addEventListener('click', function(){
     if (trendWrapDiv.style.display == "block" &&   otherWrapDiv.style.display == "none") {
         return;
     }else{
-        justTrendy.style.color= "White";
+        highlight(justTrendy);
         trendWrapDiv.style.display= "block";
         otherWrapDiv.style.display= "none";
         notTrending(getMoviesNotTrending());
     }
   
 });
+
+function highlight(divCont){  
+    justTrendy.style.color= "rgb(90,105,147)";
+    BtnMovies.style.color= "rgb(90,105,147)";
+    BtnSeries.style.color= "rgb(90,105,147)";
+    BtnBookmark.style.color= "rgb(90,105,147)";
+    divCont.style.color= "White";
+}
+
 function deleteContainer(){
     let allcontainer = document.querySelectorAll('.recomd');
     allcontainer.forEach(border =>{
@@ -274,10 +286,6 @@ function deleteContainer(){
     });
 }
 
-
-function getMovies(){
-        console.log({movies});  
-}
 function getMoviesTrending(){
    const trends= movies
    .filter((movie) => movie.isTrending === true);
@@ -306,7 +314,7 @@ function justMovies(){
  }
 
 function notTrending(trendArray) {
-console.log(trendArray);
+// console.log(trendArray);
     trendArray.forEach(movie => {   
         // #region
         // Create a new trend element
@@ -315,7 +323,6 @@ console.log(trendArray);
         const divTrend = document.createElement('div');
         divTrend.className = "trendrem";
         divTrend.style.backgroundImage = `url("/asset/${movie.thumbnail.regular.large}")`;
-        // url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
         // Create a new bookmark element
         const divBookmark = document.createElement('div');
         divBookmark.className = "bookmarkWrap";
@@ -373,7 +380,7 @@ console.log(trendArray);
 
 
 window.addEventListener('load',function(){
-    
+    highlight(justTrendy);
    getMoviesTrending().forEach(movie => {   
         // Create a new trend element
         const divTrend = document.createElement('div');
