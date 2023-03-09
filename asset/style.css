@@ -139,6 +139,19 @@ body{
 .trendingWrap{
     width: 100%;
 }
+.otherMoviesContainer{
+    display: none;
+    width: 100%;
+  
+    
+}
+.difMovie{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+
+}
 #recommends{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
