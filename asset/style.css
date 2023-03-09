@@ -286,4 +286,225 @@ body::-webkit-scrollbar-track{
       transform: rotate(2deg);
     }
 }
+/* Ipad Screens */
+@media screen and (max-width: 980px){
+    body{
+        width: 100%;
+    }
+    .container{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .leftIcons{
+        color: rgb(90,105,147);
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+    .main{
+        position: absolute;
+        padding: 1px;
+         width: 95%;
+         margin: 0px;
+    }
+    #sidebar{
+        position: relative;
+        background-color:  #161d2f;
+        display: flex;
+        min-height: 20px;
+        width: 100%;
+        justify-content: left;
+        /* align-items: left; */
+        /* text-align: center; */
+        padding: 20px;
+        border-radius: 10px;  
+        margin-bottom: 20px;  
+    }
+    .otherVids{
+        font-size: 1.8rem;
+        display: flex;
+        min-height: 100%;
+        justify-content: space-between;
+        align-items: center;
+        /* background-color: red; */
+        width: 65%;
+    }
+    .mainIcon{
+        display: flex;
+        color: #FC4747;
+        font-size: 2rem;
+        /* margin-right: 3px; */
+        margin-bottom: 1px;
+        cursor: pointer;
+        width: 40px;
+    }
+    .profileWrap{
+        display: flex;
+        justify-self: center;
+         justify-items: center;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1.5px solid white;
+        /* position it at right of the sidebat */
+        position: absolute;
+        right: 15px;
+        background: url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
+    }
+    .vidmain{
+        margin-right:50px;
+      }
+      .topIcon{
+        display: flex;
+        justify-items: center;
+        text-align: center;
+        width: 60%;
+    }
 
+    .difMovie{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    
+    }
+    #recommends{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+    .submain{
+        width: 100%;
+
+    }
+    .trendrem{
+        position: relative;
+        display: block;
+        border-radius: 5px;
+        height: 180px;
+        /* margin-right: 10px; */
+        width: 95%;
+        padding: 15px;
+        /* Set initial brightness */
+        filter: brightness(1);
+        /* Set transition duration and timing function */
+        transition: filter 0.3s ease-in-out;
+        /* Set initial transform
+        transform: rotate(0deg);
+        /* Set transition duration and timing function */
+        /* transition: transform 0.3s ease-in-out; */ 
+        background: url("/asset/thumbnails/1998/regular/large.jpg") no-repeat center center/cover;
+    
+    }
+}
+
+/* mobile (min-width: 320px) and */
+@media screen and (max-width: 420px){
+    body{
+        width: 100%;
+    }
+    .container{
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+    }
+    #sidebar{
+        position: relative;
+        background-color:  #161d2f;
+        display: flex;
+        min-height: 20px;
+        width: 100%;
+        justify-content: left;
+        /* align-items: left; */
+        /* text-align: center; */
+        padding: 20px;
+        border-radius: 10px;  
+        margin-bottom: 20px;  
+    }
+    .otherVids{
+        font-size: 1.8rem;
+        display: flex;
+        min-height: 100%;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+    }
+    .mainIcon{
+        display: flex;
+        color: #FC4747;
+        font-size: 1.8rem;
+        /* margin-right: 3px; */
+        margin-bottom: 1px;
+        cursor: pointer;
+        width: 40px;
+    }
+    .profileWrap{
+        display: flex;
+        justify-self: center;
+         justify-items: center;
+        text-align: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        border: 1.5px solid white;
+        /* position it at right of the sidebat */
+        position: absolute;
+        right: 15px;
+        background: url("./images/Victors\ Passport.JPG") no-repeat center center/cover;
+    }
+    .main{
+        position: absolute;
+        padding: 1px;
+         width: 95%;
+         margin: 0px;
+    }
+  .vidmain{
+    margin-right:20px;
+  }
+    .topIcon{
+        display: flex;
+        justify-items: center;
+        text-align: center;
+        width: 60%;
+    }
+    .difMovie{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    
+    }
+    #recommends{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+    .submain{
+        width: 100%;
+    }
+    .trendrem{
+        position: relative;
+        display: block;
+        border-radius: 5px;
+        height: 180px;
+        /* margin-right: 10px; */
+        width: 95%;
+        padding: 15px;
+        /* Set initial brightness */
+        filter: brightness(1);
+        /* Set transition duration and timing function */
+        transition: filter 0.3s ease-in-out;
+        /* Set initial transform
+        transform: rotate(0deg);
+        /* Set transition duration and timing function */
+        /* transition: transform 0.3s ease-in-out; */ 
+        background: url("/asset/thumbnails/1998/regular/large.jpg") no-repeat center center/cover;
+    
+    }
+    
+}
