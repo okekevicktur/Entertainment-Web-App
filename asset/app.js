@@ -28,6 +28,7 @@ search.addEventListener('click', function(){
     // return;
     if (newMovie === "") {
         alert("type a movie title to search");
+        justTrendy.click();
     }else{
             trendWrapDiv.style.display= "block";
             otherWrapDiv.style.display= "none";

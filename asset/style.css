@@ -326,7 +326,6 @@ body::-webkit-scrollbar-track{
         min-height: 100%;
         justify-content: space-between;
         align-items: center;
-        /* background-color: red; */
         width: 65%;
     }
     .mainIcon{
@@ -430,8 +429,7 @@ body::-webkit-scrollbar-track{
         min-height: 100%;
         justify-content: center;
         align-items: center;
-        /* background-color: red; */
-    }
+      }
     .mainIcon{
         display: flex;
         color: #FC4747;
