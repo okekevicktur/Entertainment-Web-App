@@ -287,7 +287,7 @@ body::-webkit-scrollbar-track{
     }
 }
 /* Ipad Screens */
-@media screen and (min-width: 450px) and (max-width: 980px) {
+@media screen and (min-width: 750px) and (max-width: 890px) {
     body{
         width: 100%;
     }
@@ -401,7 +401,7 @@ body::-webkit-scrollbar-track{
 }
 
 /* mobile (min-width: 320px) and */
-@media screen and (max-width: 420px){
+@media screen and (min-width: 320px) and (max-width: 600px){
     body{
         width: 100%;
     }
